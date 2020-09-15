@@ -1,0 +1,14 @@
+.card {
+  border-radius: 2em;
+  background: linear-gradient(147deg, #FFE53B 0%, rgba(56,196,213,1) 74%);
+  border: 0px;
+  cursor: pointer
+}
+
+.card-img-top {
+  border-radius: 2em;
+}
+
+.text-reset {
+  
+} 
