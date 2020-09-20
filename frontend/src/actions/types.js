@@ -10,6 +10,7 @@ export const GET_PRODUCTS = "GET_PRODUCTS"
 export const ADD_FOOD = "ADD_FOOD"
 export const GET_ORDER = "GET_ORDER"
 export const NEW_ORDER = "NEW_ORDER"
+export const GET_TOTAL_ORDER_DATE = "GET_TOTAL_ORDER_DATE"
 
 // USER 
 export const USER_LOADING = 'USER_LOADING';

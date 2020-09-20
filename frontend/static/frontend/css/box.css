@@ -20,6 +20,7 @@ body {
     margin: 0.2em auto;
     transform: translateZ(0);
 }
+
 .option-container {
     display: flex;
     justify-content: center;
@@ -148,3 +149,15 @@ body {
 /* .option-input:nth-child(1):checked ~ .option:nth-of-type(1) .option__label, .option-input:nth-child(1):checked ~ .option:nth-of-type(1) .option__label::after, .option-input:nth-child(2):checked ~ .option:nth-of-type(2) .option__label, .option-input:nth-child(2):checked ~ .option:nth-of-type(2) .option__label::after {
     transform: scale(1);
 }  */
+@media screen and (max-width:980px) {
+    .option-group {
+        width: 90%;
+        max-width: 600px;
+        height: 200px;
+  }
+    .option__label {
+        font-size: 3em;
+        text-transform: none;
+    }
+    
+}

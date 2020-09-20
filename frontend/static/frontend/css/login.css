@@ -57,3 +57,20 @@
 }
 .back { text-align: left; margin-top:10px;}
 .back a {color: #444444; font-size: 13px;text-decoration: none;}
+
+@media screen and (max-width:980px) {
+  .main-div{
+    width: 100%;
+  }
+  .panel h2 {
+    font-size: 35px;
+   }
+   .login-form .form-control {
+    font-size: 30px;
+    height: 60px;
+   }
+   .login-form .btn.btn-primary {
+    font-size: 30px;
+    height: 60px;
+    }
+}

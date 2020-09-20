@@ -18,4 +18,5 @@ urlpatterns = [
     path('api/categorys/', controller.CategoryViewSet.as_view(), name="category"),
     path('api/products/', controller.ProductViewSet.as_view(), name="product"),
     path('api/orders/', controller.OrderRecordsView.as_view(), name="orderrecord"),
+    path('api/totalorders/', controller.OrderTotalDateViewSet.as_view(), name="totalorders"),
 ]

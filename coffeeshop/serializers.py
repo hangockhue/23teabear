@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.db.models import QuerySet
 from .models import Order, Table, Category, Drink
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
@@ -34,3 +35,8 @@ class OrdersPagination(pagination.PageNumberPagination):
     page_size = 5
     page_size_query_param = 'page_size'
     max_page_size = 10
+
+class TotalOrderSerializer(serializers.Serializer):
+    ordered_at = serializers.DateField()
+    amount = serializers.IntegerField()
+    total = serializers.IntegerField()

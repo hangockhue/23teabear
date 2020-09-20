@@ -3,7 +3,7 @@ import {GET_CATEGORYS,
     GET_PRODUCTS,
     ADD_FOOD, 
     GET_ORDER,
-    GET_OLD_ORDERS, CREATE_MESSAGE, RESET_ORDER, NEW_ORDER} from './types'
+    GET_OLD_ORDERS, CREATE_MESSAGE, RESET_ORDER, NEW_ORDER, GET_TOTAL_ORDER_DATE} from './types'
 import {tokenConfig} from './auth'
 import { createMessage, returnErrors } from './messages';
 // GET CATEGORYS
@@ -48,6 +48,18 @@ export const getOldOrders = (id) => (dispatch) => {
             type: GET_OLD_ORDERS,
             payload: res.data
         })
+    }).catch((err) => dispatch(returnErrors(err.response.data, err.response.status)))
+}
+
+// GET DATE AND ORDER
+
+export const getTotalOrderDate = (id) => (dispatch) => {
+    axios.get(`api/totalorders/?page=${id}`)
+    .then(res => {
+        dispatch({
+            type : GET_TOTAL_ORDER_DATE,
+            payload : res.data
+        }) 
     }).catch((err) => dispatch(returnErrors(err.response.data, err.response.status)))
 }
 

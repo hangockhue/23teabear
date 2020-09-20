@@ -10,7 +10,7 @@ class Order(models.Model):
     content = models.TextField(blank=True,null=True)
     drink = models.TextField(blank=True, null=True)
     total = models.IntegerField(null=True, blank=True)
-    ordered_at = models.DateTimeField('order_timestamp', auto_now_add=True)
+    ordered_at = models.DateField(auto_now_add=True)
     def __str__(self):
         return repr(dict(id=self.id, ordered_at=self.ordered_at,
             total=self.total))

@@ -1,11 +1,12 @@
 import {GET_CATEGORYS, GET_ORDER, GET_OLD_ORDERS, RESET_ORDER} from '../actions/types';
-import {GET_PRODUCTS, ADD_FOOD, NEW_ORDER} from '../actions/types'
+import {GET_PRODUCTS, ADD_FOOD, NEW_ORDER, GET_TOTAL_ORDER_DATE } from '../actions/types'
 
 const initialState = {
     categorys: [],
     products: [],
     order: [],
     old_orders: [],
+    total_orders_date : []
 }
 
 export default function (state=initialState, action) {
@@ -46,6 +47,12 @@ export default function (state=initialState, action) {
             return {
                 ...state,
                 order : action.payload
+            }
+        }
+        case GET_TOTAL_ORDER_DATE: {
+            return {
+                ...state,
+                total_orders_date : action.payload
             }
         }
         default:

@@ -45,7 +45,8 @@ export class History extends Component {
                     <Col xs={20}>
                         <PanelGroup accordion bordered>
                         {this.state.results.map(order => (
-                            <Panel key={order.id} header={order.id} >
+                            <Panel key={order.id} header={"Hóa đơn số " +
+                             order.id.toString() + "/" + new Date(order.ordered_at).toISOString().split('T')[0]} >
                                     <ColumnTable order={order}></ColumnTable>
                             </Panel>
                         ))}

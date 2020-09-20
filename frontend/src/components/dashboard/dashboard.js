@@ -33,16 +33,16 @@ export class DashBoard extends Component  {
                 </div>
                 <div className="option-group">
                 <div className="option-container">
-                    <NavLink activeStyle={{color:'black'}} to="" className="option" htmlFor="option-3">
+                    <NavLink activeStyle={{color:'black'}} to="/totaldate" className="option" htmlFor="option-3">
                     <span className="option__indicator" />
                     <span className="option__label">
-                        <sub>Thanh toán</sub>
+                        <sub>Doanh số </sub>
                     </span>
                     </NavLink>
                     <NavLink activeStyle={{color:'black'}} to="" className="option" htmlFor="option-4">
                     <span className="option__indicator" />
                     <span className="option__label">
-                        <sub>Quản lí</sub>
+                        <sub>Trang chủ</sub>
                     </span>
                     </NavLink>
                 </div>

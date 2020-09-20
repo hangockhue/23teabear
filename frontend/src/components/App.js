@@ -14,6 +14,7 @@ import Login from './login/login'
 // Quan li
 import Dashboard from './dashboard/dashboard';
 import History from './dashboard/history';
+import OrderInDate from './orderindate/orderindate'
 // Redux and Route
 import { Provider } from 'react-redux';
 import store from '../store'
@@ -46,8 +47,9 @@ class App extends Component {
                                 <Route exact path="/payment" component={Payment}></Route>
                                 <Route exact path="/addorder" component={Table}></Route>
                                 <Route path="/addorder/:id" component={Order}></Route>
-                                <Route path="/manage" component={Dashboard}></Route>
-                                <Route path="/history" component={History} />
+                                <PrivateRoute path="/manage" component={Dashboard} />
+                                <PrivateRoute path="/history" component={History} />
+                                <PrivateRoute path="/totaldate" component={OrderInDate} />
                             </Switch>
                         </Router>
                     </Provider>
