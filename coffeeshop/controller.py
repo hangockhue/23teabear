@@ -103,7 +103,7 @@ class OrderTotalDateViewSet(views.APIView):
         # queryset = Order.objects.values('ordered_at').distinct()
         
         queryset = Order.objects.filter(table=None).values('ordered_at')
-        addkey = queryset.annotate(amount=Sum('total')).annotate(total=Count('ordered_at'))
+        addkey = queryset.annotate(total=Sum('total')).annotate(amount=Count('ordered_at'))
         results = []
         
         for i in addkey:
